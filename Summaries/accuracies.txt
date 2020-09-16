@@ -1,0 +1,15 @@
+test_loss1, test_acc1 = model1.evaluate(test_dsS1, verbose=2)
+test_loss2_1, test_acc2_1 = model2_1.evaluate(test_dsS1, verbose=2)
+test_loss2_2, test_acc2_2 = model2_2.evaluate(test_dsS2, verbose=2)
+test_loss2, test_acc2 = model2.evaluate(test_ds, verbose=2)
+test_loss3_2, test_acc3_2 = model3_2.evaluate(test_dsS2,verbose=2)
+test_loss3, test_acc3 = model3.evaluate(test_ds,verbose=2)
+testACC, testLOSS = model.evaluate(test_ds, verbose=1 )
+test_loss4_1, test_acc4_1 = model4_1.evaluate(test_dsS1,verbose=2)
+test_loss4_2, test_acc4_2 = model4_2.evaluate(test_dsS2,verbose=2)
+test_loss4, test_acc4 = model4.evaluate(test_ds,verbose=2)
+test_loss5, test_acc5 = model5.evaluate(test_ds,verbose=2)
+test_loss6, test_acc6 = model6.evaluate(test_ds,verbose=2)
+
+
+

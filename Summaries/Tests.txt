@@ -1,0 +1,7 @@
+ 
+Model 1   - T_loss: 2.0509 - T_accuracy: 0.4307
+Model 2_1 - T_loss: 1.9352 - T_accuracy: 0.5271
+Model 2_2 - T_loss: 1.9605 - T_accuracy: 0.5027
+Model 2   - T_loss: 0.5223 - T_accuracy: 0.8254
+Model 3_2 - T_loss: 1.7970 - T_accuracy: 0.6658
+Model 3   - T_loss: 1.8120 - T_accuracy: 0.6481

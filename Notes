@@ -1,0 +1,101 @@
+Using training data 0.8 and 0.2 as validation set
+Model6 uses image augmentation, and the accuracy fall drastically.
+Introducing more randomness(model6r) in the image_augmentation procedure reduce the accuracy even more.
+Finer dataset making procedure--->improved the accuracy slightly (1%) (model8)
+Increasing the Epoch 3-->5 (model8)
+Training and Val accuracy increased to almost 100% (0.9968)
+Increasing Epoch 5--->10 (model8)
+Epoch 6--->full 100% both train and val
+Same for Epoch 7,8,9
+Epoch 10 down to 98
+Testing Epoch 5 98>96 Epoch 10
+Model8--->Input shape from 32 to 32,32,3
+Epoch 5/5 Train_ACC 0.9997,Val_ACC 100, test_ACC 0.977
+"Above, you can see that the output of every Conv2D and MaxPooling2D layer is a 3D tensor of shape (height, width, channels)"
+Half image(16x16)--->reduce convolutional version test 0.9564 ACC
+quarter image 8x8--->more reduction test 0.74
+SGD as optimazer greatly reduce the accuracy (down to 20%), adam confirmed best option so far.
+Sigmoid instead of relu--->0.9757 ACC_test bot 100 for train and val
+
+
+selection of param--->Train-->Val--->Test--->Comments results
+Starting with tiny model 8x8, then 16x16, then 32x32
+Long but Dense-only model--->Low accuracy (in general)
+--->Use history to plot  test, traning and val of differently sized imaged-models
+--->this will show shorter vs longer network
+-->Gradiant vs adam on short model
+--->sigmoid vs linear activation on the best model
+--->Gradiant vs Adam and other Optimazer on the best model
+Use history(=model.fit).history to report loss and metric  and model.summary for the structure.
+
+Metrics=Accuracy (how often y_pred=y_true) better accuracy and results than SparseCategoricalAccuracy
+
+Nuovo file .py riorganizzato con tutte le info sulla creazione dataset, seguire^direttive sull'ordine, plottare i confronti e giudizio
+
+use model for more generic label (just use a new dataset)
+Model.11 Train_ACC 0.9946,VAl_ACC 0.9868, Test_ACC 0.9260
+
+use model for specific label among those than (after getting the "apple" getting quality new surely newdataset folder for label reason)
+
+model4 max possible model for 8x8, model5 max possible model for 16x16
+
+Best model so far is 16x16 applied to model4, 16x16 applied to five-->reduce ACC
+Epoche più corte maggior crollo di ACC
+^Non sempre vero (di poco)
+64 label x32>x16 slightly
+
+Specific 10-->62 More Epoch will help(YES), More Dense.layers(NO) and smaller batch size(YES)
+Overfitting--->Data augmentation
+increasing Dense(128)--->Dense(256) reduce ACC
+Epoch:20 (32_ACC)---->Epoch:30(0.4155)
+Epoch:30 using batch size 12 ACC 47
+Epoch:30 using BS 16  ACC 35
+Epoch:50 using BS 10 ACC 49
+Epoch:100 using bs 5 ACC 56 (If good try data augmentation and let's see what happens)
+Epoch:100 using bs 9 ACC 48  (keeping the best--->data Aug after) Aug ACC = 42
+Epoch:100 using bs 1 ACC 25
+Epoch:5 using bs 3 ACC 23
+Epoch:5 using bs 5 ACC 26
+Epoch:5 using bs 1 ACC 21
+Epoch:5 using bs 8 ACC 26
+Epoch:5 using bs 9 ACC 28
+Epoch:5 using bs 10 ACC 22
+Epoch:200 using bs 9 ACC 56
+predict over new multi-fruit images
+
+
+The hyperparameter search is complete. The optimal number of units in the first densely-connected
+layer is 224 and the optimal learning rate for the optimizer
+is 0.0001.
+
+
+
+Through tuning we get a test 96 ACC with two HL bounded to the same numbers of nodes.
+
+
+
+Increasing Epoch and increasing sequentially the numbers of nodes in layers n_1--->n_2 instead that the oppsite.
+
+
+341/341 - 1s - loss: 2.0509 - accuracy: 0.4307
+341/341 - 1s - loss: 1.9352 - accuracy: 0.5271
+341/341 - 1s - loss: 1.9605 - accuracy: 0.5027
+341/341 - 1s - loss: 0.5223 - accuracy: 0.8254
+341/341 - 1s - loss: 1.7970 - accuracy: 0.6658
+341/341 - 1s - loss: 1.8120 - accuracy: 0.6481
+341/341 [==============================] - 1s 4ms/step - loss: 0.2304 - accuracy: 0.9458
+341/341 - 1s - loss: 0.2040 - accuracy: 0.9407
+341/341 - 2s - loss: 0.0810 - accuracy: 0.9746
+341/341 - 2s - loss: 0.0851 - accuracy: 0.9734
+341/341 - 2s - loss: 0.4664 - accuracy: 0.9053
+341/341 - 2s - loss: 0.1116 - accuracy: 0.9738
+
+
+
+341/341 - 4s - loss: 0.1762 - accuracy: 0.9543 M6 Epoch:10
+341/341 - 3s - loss: 0.0381 - accuracy: 0.9884 M4 Epoch:5 BEST
+341/341 - 2s - loss: 0.0763 - accuracy: 0.9724 M6 Epoch:5
+
+
+
+Has to surpass 95 ACC

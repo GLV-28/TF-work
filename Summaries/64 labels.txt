@@ -1,0 +1,11 @@
+[Apple, ,Apricot, ,Avocado, ,Banana, ,Beetroot, ,Blueberry,
+ ,Cactus fruit, ,Cantaloupe, ,Carambula, ,Cauliflower, ,Cherry,
+ ,Clementine, ,Cocos, ,Corn, ,Cucumber, ,Dates, ,Eggplant, ,Fig,
+ ,Ginger Root, ,Granadilla, ,Grape, ,Grapefruit, ,Guava, ,Huckleberry,
+ ,Kaki, ,Kiwi, ,Kohlrabi, ,Kumquats, ,Lemon, ,Limes, ,Lychee, ,Mandarine,
+ ,Mango, ,Mangostan, ,Maracuja, ,Melon Piel de Sapo, ,Mulberry,
+ ,Nectarine, ,Nut, ,Onion, ,Orange, ,Papaya, ,Passion Fruit, ,Peach,
+ ,Pear, ,Pepino, ,Pepper, ,Physalis, ,Pineapple, ,Pitahaya Red, ,Plum,
+ ,Pomegranate, ,Pomelo Sweetie, ,Potato, ,Quince, ,Rambutan, ,Raspberry,
+ ,Redcurrant, ,Salak, ,Strawberry, ,Tamarillo, ,Tangelo, ,Tomato,
+ ,Watermelon]
