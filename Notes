@@ -1,3 +1,8 @@
+Datasets
+New-dataset -> 10label
+MT10label->More than 10label (64)
+
+
 Using training data 0.8 and 0.2 as validation set
 Model6 uses image augmentation, and the accuracy fall drastically.
 Introducing more randomness(model6r) in the image_augmentation procedure reduce the accuracy even more.
@@ -15,7 +20,6 @@ Epoch 5/5 Train_ACC 0.9997,Val_ACC 100, test_ACC 0.977
 Half image(16x16)--->reduce convolutional version test 0.9564 ACC
 quarter image 8x8--->more reduction test 0.74
 SGD as optimazer greatly reduce the accuracy (down to 20%), adam confirmed best option so far.
-Sigmoid instead of relu--->0.9757 ACC_test bot 100 for train and val
 
 
 selection of param--->Train-->Val--->Test--->Comments results
